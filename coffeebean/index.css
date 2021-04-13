@@ -1,0 +1,719 @@
+@charset 'utf-8';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*float 해제 가상선택자*/
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*구글 웹폰트
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+*/
+#badge {
+	width: 230px;
+	height: 230px;
+	border-radius: 50%;
+	border: 2px dotted rgb(47, 28, 17);
+	background-color: #fff;
+	text-align: center;
+	position: absolute;
+	top: 60px;
+	right: 100px;
+	z-index: 99;
+}
+
+#badge .point {
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-color: #fff;
+	border-top: 2px dotted rgb(47, 28, 17);
+	border-right: 2px dotted rgb(47, 28, 17);
+	position: absolute;
+	left: 70%;
+	top: 3px;
+	transform: rotate(-13deg);
+}
+
+#badge .close {
+	font-size: 28px;
+	position: absolute;
+	right: 0;
+	top: -6px;
+	color: rgb(47, 28, 17);
+	cursor: pointer;
+}
+
+#badge .box {
+	width: 70%;
+	letter-spacing: -0.4px;
+	font-size: 0.9rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 40px;
+}
+
+#badge .box a {
+	color: rgb(47, 28, 17);
+}
+
+#badge .box img {
+	width: 60%;
+}
+
+#badge .box .title {
+	background: rgb(207, 102, 26);
+	color: #fff;
+	width: 50%;
+	padding: 7px;
+	margin: 0px auto;
+	/*            padding: 8px 0;*/
+	border-radius: 50px;
+}
+
+#badge .box .des {
+	margin-top: 5px;
+}
+
+header {
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	border-bottom: 1px solid rgb(238, 238, 238);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+header .lnb {
+	/*    width: 100%;*/
+	background-color: rgb(238, 238, 238);
+	height: 40px;
+	line-height: 40px;
+}
+
+header .lnb .inner-lnb {
+	width: 1200px;
+	background-color: palegoldenrod;
+	margin: 0 auto;
+	font-size: 14px;
+}
+
+header .lnb .inner-lnb ul {
+	float: right;
+	/*    height: 40px;*/
+	/*    outline: 1px solid pink;*/
+
+}
+
+header .lnb .inner-lnb ul li {
+	height: 40px;
+	float: left;
+	margin-left: 30px;
+	letter-spacing: -1px;
+}
+
+header .lnb .inner-lnb ul li:last-child {
+	width: 60px;
+	background: rgb(47, 28, 17) url(img/ico_user_info_line.png) no-repeat center;
+	text-indent: -99999px;
+	/*인라인 요소에는 text-indent가 먹지않음 . 만약 인라인 요소에서 넣고싶다면 display-block 처리~~~*/
+}
+
+header .lnb .inner-lnb ul li > a {
+	display: block;
+	/*글씨가 없어져도 위에서 정한만큼 내자리~!*/
+	color: #333;
+}
+
+header .lnb .inner-lnb ul li > a:hover {
+	color: rgb(47, 28, 17);
+	font-weight: bold;
+}
+
+header .inner-header {
+	width: 1200px;
+	height: 100px;
+/*	    background-color: yellow;*/
+	margin: 0 auto;
+}
+
+header .inner-header h1 {
+	/*    width: 70px;*/
+	width: 100px;
+	height: 100px;
+	/*    background-color: indianred;*/
+	/*    outline: 3px solid red;*/
+	padding: 15px 0;
+	box-sizing: border-box;
+	float: left;
+}
+
+header .inner-header h1 a img {
+	/*    width: 100%;*/
+	height: 70px;
+}
+
+header .inner-header nav {
+	/*    outline: 3px solid red;*/
+	float: left;
+	margin-left: 100px;
+}
+
+header .inner-header nav ul li {
+	float: left;
+	line-height: 100px;
+	text-transform: uppercase;
+	/*텍스트 모두 대문자 변환*/
+	font-family: Arial;
+	padding: 0 30px;
+}
+
+header .inner-header nav ul li:nth-child(5) a {
+	color: rgb(207, 102, 26);
+	font-weight: bold;
+}
+
+header .inner-header nav ul li a {
+	font-weight: 700;
+	font-size: 14px;
+	color: rgb(47, 28, 17);
+	letter-spacing: -0.2px;
+}
+
+header .inner-header nav ul li a:hover {
+	color: rgb(207, 102, 26);
+}
+
+#btnSearch {
+	float: right;
+}
+
+#btnSearch a {
+	width: 20px;
+	height: 100px;
+	display: block;
+	text-indent: -99999px;
+	background: url(img/ico_search.png)no-repeat center;
+}
+
+
+
+/*---SECTION----------------------------*/
+
+section {
+	margin-top: 140px;
+}
+
+section .main {
+	width: 100%;
+	height: 500px;
+	background: url(img/main01.jpg);
+	background-repeat: no-repeat 
+	/*background-image가 컨테이너를 가득 채우지 못할 경우에도 반복하지 않는다.*/
+    background-size: cover; 
+	/*사이즈가 container에 맞지 않아도 꽉 차도록 채운다.*/
+    background-position: center;
+	/*background-image가 컨테이너에 가운데로 오도록 한다.*/ 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+
+}
+
+section .main .main-box {
+	width: 1200px;
+	height: 100%;
+	/*    outline: 3px solid lime;*/
+	margin: 0 auto;
+	position: relative;
+}
+
+section .main .main-box > a {
+	font-size: 18px;
+	color: white;
+	padding: 10px 30px;
+	border: 3px solid white;
+	border-radius: 50px;
+	position: absolute;
+	top: 50%;
+	left: 130px;
+
+}
+
+section .main .main-box > a:hover {
+	background-color: white;
+	color: #ff746d;
+	font-weight: bold;
+}
+
+/*----EVENT--------------------*/
+
+/*1.배경이미지로 구현하기*/
+/*
+section .event {
+    width: 100%;
+    height: 400px;
+    background: url(img/main_event.jpg) no-repeat center;
+    background-size: cover;
+    text-indent: -9999px;
+}
+*/
+
+/*2.이미지 태그로 구현하기*/
+section .event2 {
+	width: 100%;
+
+	margin-bottom: 30px;
+}
+
+section .event2 a {
+	display: block;
+}
+
+section .event2 a img {
+	display: block;
+	width: 100%;
+}
+
+/*---------MD-PICK------------------------*/
+
+section .md-pick {
+	width: 100%;
+	margin-top: 60px;
+}
+
+section .md-pick h2 {
+	font-family: 'Nanum Myeongjo', serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: rgb(207, 102, 26);
+	text-align: center;
+	margin-bottom: 30px;
+	/*구글 웹폰트
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+*/
+}
+
+section .md-pick {
+	width: 1200px;
+	margin: 0 auto;
+	/*    outline: 3px solid red;*/
+}
+
+section .md-pick .md-wrap .md-box {
+	width: 25%;
+	float: left;
+	/*    outline: 2px solid green;*/
+}
+
+.md-wrap .md-box .photo {
+	position: relative;
+}
+
+.md-wrap .md-box .photo .quick {
+	display: block;
+	font-size: 18px;
+	padding: 10px 20px;
+	background-color: #f38200;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-left: -25%;
+	color: #fff;
+	display: none;
+}
+
+.md-wrap .md-box .photo:hover img {
+	opacity: 0.4;
+}
+
+.md-wrap .md-box .photo:hover .quick {
+	display: block;
+}
+
+
+.md-wrap .md-box .txt-box {
+	text-align: center;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.md-wrap .md-box .txt-box .name {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 50px;
+	letter-spacing: -1px;
+}
+
+.md-wrap .md-box .txt-box .dex {
+	font-size: 14px;
+	letter-spacing: -1px;
+	line-height: 40px;
+
+}
+
+.md-wrap .md-box .txt-box .price {
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: 700;
+	color: rgb(207, 102, 26);
+}
+
+/*--NEW------------------*/
+section .new {
+	width: 1200px;
+	margin: 80px auto;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+section .new h2 {
+
+	font-size: 24px;
+	font-weight: 800;
+	color: rgb(207, 102, 26);
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+section .new .box {
+	width: 380px;
+	margin-right: 30px;
+	float: left;
+}
+
+section .new .box:last-child {
+	margin-right: 0;
+}
+
+section .new .box a {
+	display: block;
+	margin-bottom: 30px;
+	overflow: hidden
+		/*부모요소한테 줘야함*/
+	;
+
+}
+
+section .new .box a:hover img {
+	transform: scale(1.3);
+}
+
+section .new .box img {
+	display: block;
+	transition: all 0.5s;
+	/*항상 변하기 전에*/
+}
+
+section .new .box p {
+	text-align: center;
+	color: rgb(207, 102, 26);
+	font-weight: 800;
+}
+
+/*--INSTAGRAM------------------------------------*/
+
+section .instagram {
+	width: 100%;
+	background-color: rgb(127, 81, 161);
+	padding: 55px 0 40px;
+	text-align: center;
+}
+
+section .instagram h2 {
+	letter-spacing: -1px;
+	color: white;
+	padding-bottom: 20px;
+}
+
+section .instagram .img-wrap {
+	width: 1200px;
+	background-color: #f38200;
+	margin: 0 auto;
+}
+
+section .instagram .img-wrap .img-box {
+	width: 200px;
+	float: left;
+}
+
+.img-wrap .img-box > a > img {
+	width: 100%;
+	float: left;
+	transition: all 0.3s;
+}
+
+.img-wrap .img-box:hover > a > img {
+	opacity: 0.6;
+}
+
+.instagram > a
+
+/*하위요소 a 말고 자식a만 선택*/
+	{
+	width: 400px;
+	display: inline-block;
+	height: 40px;
+	margin-top: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	background-color: #f38200;
+	color: white;
+	font-weight: 700;
+	font-family: 'Nanum Myeongjo', serif;
+}
+
+/*-----footer--------------*/
+footer {
+	width: 100%;
+	background-color: rgb(238, 238, 238);
+}
+
+footer .inner-footer {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+footer .inner-footer .sitemap {
+	margin: 60px auto;
+}
+
+footer .inner-footer .sitemap .mapbox {
+	width: 200px;
+	float: left;
+}
+
+footer .inner-footer .sitemap .mapbox h2 {
+	margin-bottom: 20px;
+	font-family: 'Nanum Myeongjo', serif;
+	font-weight: 700;
+	font-size: 18px;
+	color: rgb(207, 102, 26);
+}
+
+footer .inner-footer .sitemap .mapbox ul {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 14px;
+	letter-spacing: -0.4px;
+	/*    line-height: 1.6;*/
+}
+
+footer .inner-footer .sitemap .mapbox ul li {
+	margin-bottom: 10px;
+}
+
+footer .inner-footer .sitemap .mapbox ul li a {
+	color: #666;
+}
+
+.footer-bottom {
+	margin: 0 auto;
+	width: 1200px;
+	font-family: 'Nanum Gothic', sans-serif;
+	padding: 30px 0;
+	border-top: 1px solid #000;
+}
+
+.footer-bottom .link {
+	width: 60%;
+	float: left;
+}
+
+.footer-bottom .link a {
+	font-size: 14px;
+	color: #000;
+}
+
+.footer-bottom .link a:hover {
+	color: rgb(207, 102, 26);
+	font-weight: bold;
+}
+
+.footer-bottom .sns {
+	width: 40%;
+	float: right;
+	text-align: right;
+}
+
+.footer-bottom {
+	clear: both;
+}
+
+
+/*
+header{
+    font-family: 'Nanum Gothic', sans-serif;
+
+    width: 100%;
+    position:fixed;
+    top: 0;
+    margin: 0 auto;
+        background-color: white;
+
+}
+*/
+/*
+.lnb {
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+}
+
+.lnb .inner-lnb {
+    width: 1200px;
+    margin: 0 auto;
+    height: 40px;
+    background-color: rgb(235, 235, 235);
+}
+
+.lnb .inner-lnb ul {
+    float: right;
+}
+
+.lnb .inner-lnb ul li {
+    float: left;
+}
+.lnb .inner-lnb ul li:last-child {
+    width: 60px;
+    height: 40px;
+    background-color: rgb(47, 28, 17);
+    
+
+}
+*/
+/*
+.lnb .inner-lnb ul li:last-child a{
+background:url(img/ico_user_info_line.png) no-repeat;
+    background-position: center;
+    outline: 1px solid red;
+    display: block;
+    margin: 0 auto;
+    
+    text-indent: -99999999px;
+}
+
+.lnb .inner-lnb ul li a {
+    font-size: 0.8em;
+    margin-right: 20px;
+    line-height: 40px;
+    color: black;
+}
+*/
+/*
+
+.inner-header {
+    width:1200px;
+    height: 100px;
+    margin: 0 auto;
+    outline: 2px solid lime;
+}
+
+*/
+/*
+.inner-header h1 {
+    float: left;
+    padding-top: 15px;
+        outline: 3px solid lime;
+
+}
+*/
+/*
+.inner-header nav ul {
+    margin-left: 180px;
+}
+.inner-header nav ul li {
+    float:left;
+    
+    outline: 2px solid green;
+
+}
+
+*/
+/*
+.inner-header nav ul li a {
+    font-size: 0.9em;
+    color: rgb(42, 28, 17);
+    font-weight: bold;
+    margin: 30px;
+    line-height: 100px;
+
+    outline: 2px solid pink;
+}
+*/
+/*
+.inner-header nav ul li:hover a {
+    color: rgb(207,102,26);
+}
+.inner-header #btnSearch a{
+    outline: 3px solid red;
+    margin: 40px auto;
+    width: 20px;
+    text-indent: -9999999999px;
+    background: url(img/ico_search.png)no-repeat;
+    float: right;
+}
+*/
+
+/*//header*/
+
+/*
+section {
+    margin-top: 140px;
+    width: 100%;
+background-color: fuchsia
+}
+*/
+
+/*
+.main {
+    height: 540px;
+    outline: 3px solid green;
+    background: url(img/main01.jpg)no-repeat;
+    background-position: center;
+}
+*/
+/*
+.main .main-box {
+    width: 70%;
+    position: relative;
+    height: 350px;
+    outline: 1px solid black;
+    margin: 0 auto;
+}
+*/
+/*
+.main .main-box a{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.main .main-box a:hover{
+    background-color:white;
+    color: indianred;
+    font-weight: bold;
+    
+    
+}
+*/

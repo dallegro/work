@@ -1,0 +1,127 @@
+@charset 'utf-8';
+
+/*---header--------------------------------------*/
+
+/*구글 웹폰트
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Merriweather', serif;
+*/
+
+
+header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(238, 238, 238);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+header .lnb {
+    /*    width: 100%;*/
+    background-color: rgb(238,238,238);
+    height: 40px;
+    line-height: 40px;
+}
+
+header .lnb .inner-lnb {
+    width: 1200px;
+    background-color: palegoldenrod;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+header .lnb .inner-lnb ul {
+    float: right;
+    /*    height: 40px;*/
+    /*    outline: 1px solid pink;*/
+
+}
+
+header .lnb .inner-lnb ul li {
+    height: 40px;
+    float: left;
+    margin-left: 30px;
+    letter-spacing: -1px;
+}
+
+header .lnb .inner-lnb ul li:last-child {
+    width: 60px;
+    background: rgb(47, 28, 17) url(../img/ico_user_info_line.png) no-repeat center;
+    text-indent: -99999px;
+    /*인라인 요소에는 text-indent가 먹지않음 . 만약 인라인 요소에서 넣고싶다면 display-block 처리~~~*/
+}
+
+header .lnb .inner-lnb ul li > a {
+    display: block;
+    /*글씨가 없어져도 위에서 정한만큼 내자리~!*/
+    color: #333;
+}
+
+header .lnb .inner-lnb ul li > a:hover {
+    color: rgb(47, 28, 17);
+    font-weight: bold;
+}
+
+header .inner-header {
+    width: 1200px;
+    height: 100px;
+    /*    background-color: yellow;*/
+    margin: 0 auto;
+}
+
+header .inner-header h1 {
+    /*    width: 70px;*/
+    width: 100px;
+    height: 100px;
+    /*    background-color: indianred;*/
+    /*    outline: 3px solid red;*/
+    padding: 15px 0;
+    box-sizing: border-box;
+    float: left;
+}
+
+header .inner-header h1 a img {
+    /*    width: 100%;*/
+    height: 70px;
+}
+
+header .inner-header nav {
+    /*    outline: 3px solid red;*/
+    float: left;
+    margin-left: 100px;
+}
+
+header .inner-header nav ul li {
+    float: left;
+    line-height: 100px;
+    text-transform: uppercase;
+    /*텍스트 모두 대문자 변환*/
+    font-family: Arial;
+    padding: 0 30px;
+}
+
+header .inner-header nav ul li a {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(47, 28, 17);
+    letter-spacing: -0.2px;
+}
+
+header .inner-header nav ul li a:hover {
+    color: rgb(207, 102, 26);
+}
+
+#btnSearch {
+    float: right;
+}
+
+#btnSearch a {
+    width: 20px;
+    height: 100px;
+    display: block;
+    text-indent: -99999px;
+    background: url(../img/ico_search.png)no-repeat center;
+}

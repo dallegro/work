@@ -1,0 +1,92 @@
+@charset 'utf-8';
+/*-----footer--------------*/
+footer {
+    width: 100%;
+    background-color: rgb(238,238,238);
+}
+
+footer .inner-footer {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+footer .inner-footer .sitemap {
+    margin: 60px auto;
+}
+
+footer .inner-footer .sitemap .mapbox {
+    width: 200px;
+    float: left;
+}
+
+footer .inner-footer .sitemap .mapbox h2 {
+    margin-bottom: 20px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgb(207, 102, 26);
+}
+
+footer .inner-footer .sitemap .mapbox ul {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.4px;
+    /*    line-height: 1.6;*/
+}
+
+footer .inner-footer .sitemap .mapbox ul li {
+    margin-bottom: 10px;
+}
+
+footer .inner-footer .sitemap .mapbox ul li a {
+    color: #666;
+}
+
+footer .inner-footer .sitemap .mapbox ul li a:hover {
+    font-weight: bold;
+}
+
+.footer-bottom {
+    margin: 0 auto;
+    width: 1200px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 30px 0;
+    border-top: 1px solid #666;
+}
+
+.footer-bottom .link {
+    width: 60%;
+    float: left;
+}
+
+.footer-bottom .link a {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-bottom .link a:hover {
+    color: rgb(207, 102, 26);
+    font-weight: bold;
+}
+
+.footer-bottom .sns {
+    width: 40%;
+    float: right;
+    text-align: right;
+}
+
+.footer-bottom .info {
+
+    margin: 0 auto;
+    width: 1200px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 30px 0 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+}
+
+.footer-bottom p{
+    clear: both;
+}

@@ -1,0 +1,639 @@
+@charset 'utf-8';
+
+/*float 해제하는 가상선택자*/
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*기본 CSS*/
+body {
+    width: 100%;
+    text-align: center;
+}
+
+/*모바일용 CSS*/
+
+header {
+    width: 90%;
+    padding: 20px 5%;
+    position: relative;
+    outline: 3px solid #CEB288;
+
+}
+
+header .menu_btn {
+    width: 50px;
+    height: 90%;
+    cursor: pointer;
+    float: left;
+}
+
+header .menu_btn img {
+    margin: 0 auto;
+    display: block;
+    height: 50%;
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    cursor: pointer;
+}
+
+header h1 img {
+    height: 100%;
+}
+
+header .search_btn {
+    width: 50px;
+    height: 90%;
+    cursor: pointer;
+    float: right;
+}
+
+header .search_btn img {
+    margin: 0 auto;
+    display: block;
+    height: 50%;
+}
+
+
+header nav .gnb {
+    /*display: none;*/
+    /*제이쿼리로 조절!!*/
+    z-index: 1;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #BB9B69;
+}
+
+header nav .gnb li {
+    line-height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #CEB288;
+}
+
+header nav .gnb li a {
+    margin: 20px 5%;
+    font-size: 0.8rem;
+    color: #fff;
+}
+/*웹용 미디어쿼리 공통*/
+@media (min-width: 1025px) and (max-width:1920px) {
+    section{
+        padding: 100px 0 ;
+    }
+    .play{
+        
+    }
+    .pager{
+        
+    }
+}
+
+/*웹용 미디어쿼리*/
+@media (min-width: 1025px) and (max-width:1920px) {
+
+
+    header .menu_btn {
+        margin-top: 10px;
+        height: 100%;
+        cursor: pointer;
+        float: left;
+    }
+
+    header .menu_btn img {
+        margin: 0 auto;
+        display: block;
+        height: 60%;
+    }
+
+    header {
+        width: 90%;
+        height: 60px;
+        padding: 20px 5%;
+        position: relative;
+        outline: 3px solid #CEB288;
+
+    }
+
+
+    header .search_btn {
+
+        margin-top: 10px;
+        height: 100%;
+        cursor: pointer;
+        float: right;
+    }
+
+    header .search_btn img {
+        height: 60%;
+    }
+
+    header nav .gnb li {
+        line-height: 60px;
+        width: 100%;
+        border-bottom: 1px solid #CEB288;
+    }
+
+    header nav .gnb li a {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    header nav .gnb li:hover a {
+        text-decoration: underline;
+    }
+
+    section.custom #slider .container .item > p {}
+}
+
+
+/*HEADER 끝 */
+main {
+    width: 100%;
+    height: 580px;
+    position: relative;
+}
+
+main::after {
+    width: 100%;
+    height: 580px;
+    content: "";
+    background: url(../images/10ace5c20efd2.png)no-repeat center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0.8;
+}
+
+
+main > .main_inner {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+main > .main_inner > .txt {
+    text-align: left;
+    position: absolute;
+    bottom: 10%;
+}
+
+main > .main_inner > .txt h2 {
+    letter-spacing: -3px;
+    font-size: 2.5rem;
+    color: #ffff;
+    text-shadow: 5px 2px 5px #9F8152;
+}
+
+main > .main_inner > .txt h2 > b {
+    display: block;
+    font-size: 3rem;
+}
+
+main > .main_inner > .txt p {
+    line-height: 20px;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #9F8152;
+}
+
+main > .main_inner .more_btn {
+    position: absolute;
+    bottom: 40%;
+    width: 74px;
+    height: 32px;
+    right: 5%;
+    background-color: #fff;
+    line-height: 32px;
+    border-radius: 8px;
+    font-size: 0.5rem;
+}
+
+main > .main_inner .more_btn :hover {
+    background-color: #BB9B69;
+    color: #fff;
+    
+    border-radius: 8px;
+}
+
+main > .main_inner .more_btn > a {
+    display: block;
+    color: #BB9B69;
+}
+
+
+/*웹용 미디어쿼리*/
+@media (min-width: 1025px) and (max-width:1920px) {
+
+
+    main > .main_inner > .txt h2 {
+        font-size: 3.5rem;
+    }
+
+    main > .main_inner > .txt h2 > b {
+        font-size: 5rem;
+    }
+
+    main > .main_inner > .txt p {
+        line-height: 30px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #9F8152;
+    }
+    
+main > .main_inner .more_btn {
+    bottom: 40%;
+    width: 100px;
+    height: 40px;
+    left: 5px;
+    bottom: 55%;
+    background-color: #fff;
+    line-height: 40px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+}
+
+
+/*MAIN 끝 */
+section.custom {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+section.custom > h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #BB9B69;
+}
+
+section.custom > p {
+    line-height: 20px;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+section.custom #slider {
+    position: absolute;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+}
+
+section.custom #slider .container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 430px;
+    overflow: hidden;
+}
+
+section.custom #slider .container .item {
+    width: 345.6px;
+    height: 100%;
+    float: left;
+    position: relative;
+    top: 10px;
+    padding: 0 0 0 10px;
+    box-sizing: border-box;
+}
+
+section.custom #slider .container .item:first-child {
+    margin: 0;
+}
+
+section.custom #slider .container .item .plus {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    transition: all ease 0.6s;
+}
+
+section.custom #slider .container .item .plus:hover {
+    transform: rotate(180deg);
+}
+
+section.custom #slider .container .item > p {
+    background-color: #fff;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 50px;
+    color: saddlebrown;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+section.custom #slider .container .item > p > a {
+    color: #9F8152;
+    font-weight: 500;
+}
+
+section.custom #slider .container .item > p {
+    transition: all ease 0.3s;
+}
+
+section.custom #slider .container .item > p:hover {
+    text-decoration-line: underline;
+}
+
+section.custom #slider .container .item > img {
+    width: 324px;
+    height: 324px;
+    display: block;
+}
+
+section.custom .play {
+    width: 100%;
+    padding-top: 30px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 50px;
+}
+
+section.custom #left-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #B69A85;
+}
+
+section.custom .pager {
+    display: inline-block;
+
+}
+
+section.custom .pager > li {
+    float: left;
+    padding: 0 10px;
+
+}
+
+section.custom .pager > li > a {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+section.custom #right-button {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #B69A85;
+}
+
+/**태블릿용 미디어쿼리**/
+@media (min-width: 768px) and (max-width: 1024px) {
+    section.custom > h2 {
+        margin-top: 30px;
+    }
+
+    section.custom > p {
+        line-height: 20px;
+        margin-top: 15px;
+        font-size: 1.1rem;
+    }
+
+    section.custom #slider .container {
+        margin-top: 50px;
+
+    }
+}
+
+/*웹용 미디어쿼리*/
+@media (min-width: 1025px) and (max-width:1920px) {
+
+    section.custom > h2 {
+        font-size: 3rem;
+        margin-top: 60px;
+    }
+
+    section.custom > p {
+        line-height: 30px;
+        margin-top: 15px;
+        font-size: 1.1rem;
+    }
+
+    section.custom #slide {
+        
+    }
+
+    section.custom #slider .container {
+        left: 50%;
+        transform: translateX(-45%);
+        width: 100%;
+        margin-top: 50px;
+
+
+    }
+}
+
+/*인스타그램 시작*/
+section.instagram {
+    width: 90%;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+    display: block;
+}
+
+section.instagram .wrap {
+        display: block;
+
+}
+
+section.instagram .wrap > h2 {
+    font-size: 2rem;
+    margin: 30px;
+    color: #BB9B69;
+        display: block;
+
+}
+
+section.instagram .wrap > .box_wrap {
+    height: 100%;
+    height: 162px;
+        display: block;
+
+    overflow: hidden;
+}
+
+section.instagram .wrap > .box_wrap > div {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+section.instagram .wrap > .box_wrap > div > a > img {
+    width: 100%;
+    height: 100%;
+}
+
+div.wrap .pager {
+    padding-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    /*    outline: 3px solid red;*/
+
+}
+
+div.wrap .pager > li {
+    display: inline-block;
+    float: left;
+    padding: 0 10px;
+
+}
+
+div.wrap .pager > li > a {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/*인스타그램 끝*/
+@media (min-width: 768px) and (max-width: 1024px) {
+section.instagram {
+    height: 460px;
+}
+    section.instagram .wrap > .box_wrap {
+        height: 336px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width:1920px){
+
+    section.instagram {
+            height: 640px;
+    }
+
+    section.instagram .wrap > h2 {
+        font-size: 2.5rem;
+        padding: 30px;
+    }
+
+    section.instagram .wrap > .box_wrap {
+        height: 428px;
+    }
+
+    section.instagram .wrap > .box_wrap > div {
+        width: 25%;
+        display: block;
+    }
+
+}
+footer {
+    width: 100%;
+    background: #eee;
+    height: 220px;
+    text-align: left;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    display: block;
+}
+footer .sns {
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+}
+
+footer .sns > a {
+    padding: 0 5px;
+
+}
+
+footer .sns > a > img {}
+
+footer > .info {
+    padding-top: 15px;
+    font-size: 0.6rem;
+    letter-spacing: -2;
+    color: #555;
+    line-height: 15px;
+}
+
+/*웹용 미디어쿼리*/
+@media (min-width: 1025px) and (max-width:1920px) {
+
+    footer {
+        width: 100%;
+        height: 220px;
+        text-align: left;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        background: #eee;
+    }
+
+    footer .sns {
+        padding: 10px 0;
+        border-bottom: 1px solid gray;
+    }
+
+    footer .sns > a {
+        padding: 0 5px;
+
+    }
+
+    footer .sns > a > img {}
+
+    footer > .info {
+        padding-top: 15px;
+        font-size: 0.6rem;
+        letter-spacing: -2;
+        color: #555;
+        line-height: 15px;
+    }
+
+    /*FOOTER 끝*/
+
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+        footer {
+            height: 220px;
+        }
+
+        footer > .info {
+            font-size: 0.8rem;
+        }
+
+    }
+
+    @media (min-width: 1025px) and (max-width:1920px) {
+        footer {
+            height: 300px;
+        }
+
+        footer .sns {
+            width: 90%;
+            padding: 10px 0 20px 0 ;
+            margin: 0 auto;
+        }
+        footer > .info {
+
+            width: 90%;
+            margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
